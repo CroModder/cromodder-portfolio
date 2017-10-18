@@ -1,0 +1,12 @@
+
+.form-control{
+  box-shadow: none;
+  &:focus {
+      border-color: $brand-primary;
+      outline: 0;
+      box-shadow: 0 0 8px $brand-primary;
+  }
+}
+label{
+  font-weight: normal;
+}

@@ -1,0 +1,30 @@
+.social-round-icon{
+  border: 1px solid #838383;
+  border-radius: 50px;
+  @include transition(all .2s linear);
+  &:hover{
+    background-color: $brand-primary;
+    color: white;
+    border-color: $brand-primary;
+  }
+
+  &.white-round-icon{
+    border: 1px solid #FFF;
+    color: #FFF;
+    &:hover{
+      background-color: #FFF;
+      color: $brand-primary;
+      border-color: #FFF;
+    }
+  }
+}
+
+.fa-icon{
+  color: #838383;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  line-height: 32px;
+  font-size: 15px;
+  text-align: center;
+}

@@ -1,0 +1,46 @@
+.navbar-btn{
+  float:left;
+  @media (max-width: $screen-md) {
+    margin-left:15px;
+    margin-right:15px;
+  }
+}
+
+.navbar-default.active{
+  border-color: transparent;
+  @include transition(all .5s linear);
+  background-image: url('/assets/images/wave-header.svg');
+  background-position: 0 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 30px;
+
+  .navbar-nav{
+    
+  }
+  @media (max-width: $screen-sm) {
+    .navbar-nav{
+      margin-bottom: 60px;
+    }
+  }
+}
+
+
+.navbar-brand>.navbar-logo-img{
+  display: inline-block;
+  margin-top: -5px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  .icon-bar {
+      background-color: #888;
+  }
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  font-weight: 700;
+}

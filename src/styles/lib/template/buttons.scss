@@ -1,0 +1,56 @@
+
+
+.btn{
+  @include transition(all .1s linear);
+}
+
+
+.btn-primary{
+  &:hover,&:focus{
+    background-color: $btn-primary-color;
+    color: white;
+    border-color: $btn-primary-color;
+  }
+}
+
+.btn-info{
+  &:hover,&:focus{
+    background-color: $btn-info-color;
+    color: white;
+    border-color: $btn-info-color;;
+  }
+}
+
+.btn-success{
+  &:hover,&:focus{
+    background-color: $btn-success-color;
+    color: white;
+    border-color: $btn-success-color;
+  }
+}
+
+.btn-danger{
+  &:hover,&:focus{
+    background-color: $btn-danger-color;
+    color: white;
+    border-color: $btn-danger-color;
+  }
+}
+
+.btn-warning{
+  &:hover,&:focus{
+    background-color: $btn-warning-color;
+    color: white;
+    border-color: $btn-warning-color;
+  }
+}
+
+// .btn-default{
+//   background-color: transparent;
+//   &:hover{
+//     background-color: $brand-primary;
+//     color: white;
+//     border-color: $brand-primary;
+//   }
+// }
+

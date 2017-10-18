@@ -1,0 +1,22 @@
+
+h1,.h1{
+  margin-bottom: 25px;
+  &:after{
+    display: none;
+  }
+}
+h2, .h2{
+  &:after{
+    content: "...";
+    color: $brand-primary;
+    display: block;
+  }
+}
+h3, .h3{
+  color: #000000;
+}
+h4, .h4{
+  color: #838383;
+  font-weight: 300;
+  font-family: $font-family-sans-serif;
+}

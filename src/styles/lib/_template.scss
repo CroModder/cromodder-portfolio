@@ -1,0 +1,34 @@
+@import "template/_variables.scss";
+
+@import "template/scaffolding.scss";
+
+@import "template/buttons.scss";
+@import "template/navbar.scss";
+@import "template/type.scss";
+@import "template/zoom.scss";
+@import "template/icons.scss";
+
+
+.image-center{
+  margin: 0 auto;
+
+  @media (max-width: $screen-md-min) {
+    margin: 20px auto;
+  }
+}
+.card-shadow{
+  box-shadow: 0 2px 2px rgba(0,0,0,.1),
+      0 4px 4px rgba(0,0,0,.05),
+      0 8px 8px rgba(0,0,0,.05),
+      0 16px 16px rgba(0,0,0,.05),
+      0 32px 32px rgba(0,0,0,.05);
+  @media (max-width: $screen-md-min) {
+    box-shadow:none;
+  }
+}
+
+@import "template/form.scss";
+@import "template/card.scss";
+@import "template/carousel.scss";
+
+
