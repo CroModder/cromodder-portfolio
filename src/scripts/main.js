@@ -1,6 +1,16 @@
 
 import ScrollReveal from 'scrollreveal'
 
+$('a[href^="#"]').on('click', function(event) {
+  var target = $(this.getAttribute('href'));
+  if( target.length ) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+          scrollTop: target.offset().top - 100
+      }, 1000);
+  }
+});
+
 // Export your custom function for declarative use
 export { navbarFixedTopAnimation, scrollRevelation, navActivePage}
 
