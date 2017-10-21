@@ -4,7 +4,7 @@ const recursive = require('recursive-readdir-sync')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
 const srcDir = path.resolve(__dirname, '..', 'src')
-const distDir = path.resolve(__dirname, '..', 'dist')
+const docsDir = path.resolve(__dirname, '..', 'docs')
 const { NODE_ENV = 'development' } = process.env
 
 function getPagesPath () {
@@ -32,7 +32,7 @@ module.exports = {
     // or use the one in cache
     filename: 'main.js',
     // The destination folder where to put the output bundle
-    path: distDir,
+    path: docsDir,
     // Wherever resource (css, js, img) you call <script src=“...“></script>,
     // or css, or img use this path as the root
     publicPath: '/',
@@ -93,7 +93,7 @@ module.exports = {
       {
         test: /\.(jpg|jpeg|png|gif|ico)$/,
         use: [
-          // if less than 10Kb, bundle the asset inline, if greater, copy it to the dist/assets
+          // if less than 10Kb, bundle the asset inline, if greater, copy it to the docs/assets
           // folder using file-loader
           'url-loader?limit=1024&[path][name].[ext]'
         ],
@@ -108,7 +108,7 @@ module.exports = {
         new HtmlWebpackPlugin({
           filename: filename[1] + '.html',
           template: path.join(__dirname, '..', name),
-          path: distDir
+          path: docsDir
         })
       )
       return memo

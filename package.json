@@ -1,20 +1,20 @@
 {
-  "name": "mashup-template",
-  "author": "Antoine Renault <antoine.renault.mmi@gmail.com>",
-  "version": "0.1.0",
-  "description": "Mashup Template",
+  "name": "cromodder-portfolio",
+  "author": "Paolo Bozac <cromodder@gmail.com>",
+  "version": "0.1.1",
+  "description": "Portfolio site",
   "license": "MIT",
   "engines": {
     "node": ">=6"
   },
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "rimraf docs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --colors",
     "build": "npm run clean && NODE_ENV=production webpack",
     "lint": "eslint src config",
     "lint:fix": "npm run lint -- --fix",
-    "deploy:now": "npm run build && cd dist && now --static -p -n mashup-template  && cd ..",
+    "deploy:now": "npm run build && cd docs && now --static -p -n mashup-template  && cd ..",
     "deploy:gae:staging": "npm run build && gcloud app deploy --version=staging --no-promote && gcloud app browse && gcloud app logs tail -s default",
     "deploy:gae:production": "npm run build && gcloud app deploy --version production && gcloud app browse && gcloud app logs tail -s default"
   },

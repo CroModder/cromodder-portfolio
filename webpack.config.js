@@ -1,6 +1,6 @@
 const env = process.env.NODE_ENV || 'development'
 
-function buildConfig(env) {
+function buildConfig (env) {
   return require('./config/webpack.' + env + '.js')
 }
 
