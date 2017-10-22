@@ -1,7 +1,7 @@
 
 import ScrollReveal from 'scrollreveal'
 
-$('a[href^="#"]').on('click', function(event) {
+$('.navbar-nav a[href^="#"]').on('click', function(event) {
   var target = $(this.getAttribute('href'));
   $('.navbar-default').removeClass('active');
   $('.navbar-collapse').removeClass('in');
