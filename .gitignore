@@ -89,6 +89,7 @@ typings/
 
 # Dist Folder
 dist/
+docs/
 
 
 ### VisualStudioCode ###
