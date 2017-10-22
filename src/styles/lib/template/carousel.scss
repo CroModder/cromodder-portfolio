@@ -70,18 +70,25 @@
   color: $link-color;
   text-shadow: none;
   opacity: 1;
-  top: 55px;
-  right: 5rem;
+  top: 20px;
+  right: 1rem;
+  @media (min-width: $screen-sm-min) {
+    top: 55px;
+    right: 5rem;
+  }
   @media (min-width: $screen-md-min) {
     top: 75px;
   }
+
 
   &:hover, &:focus{
     color: $link-color;
   }
   &.right{
-    right: 5rem;
-
+    right: 1rem;
+    @media (min-width: $screen-sm-min) {
+      right: 5rem;
+    }
     @media (min-width: $screen-md-min) {
       // right: 4em;
       // margin-right: 6px;

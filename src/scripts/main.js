@@ -3,6 +3,8 @@ import ScrollReveal from 'scrollreveal'
 
 $('a[href^="#"]').on('click', function(event) {
   var target = $(this.getAttribute('href'));
+  $('.navbar-default').removeClass('active');
+  $('.navbar-collapse').removeClass('in');
   if( target.length ) {
       event.preventDefault();
       $('html, body').stop().animate({
@@ -21,7 +23,13 @@ function navbarFixedTopAnimation () {
 
   $(document).scroll(function () {
     scroll_pos = $(this).scrollTop()
-    if (scroll_pos > 440) {
+    console.log(scroll_pos);
+    if (scroll_pos > 50 && scroll_pos < 420 && !$('.navbar-default').hasClass('active') && window.innerWidth < 768) {
+      $('.navbar-brand').html('CM');
+    } else {
+      $('.navbar-brand').html('CroModder');
+    }
+    if (scroll_pos > 420) {
       $('.navbar-default').addClass('active')
     } else {
       if ($('.navbar-default').hasClass('home') && $('.navbar-collapse').hasClass('in')) return
@@ -32,7 +40,7 @@ function navbarFixedTopAnimation () {
   $('.navbar-toggle').click(function (event) {
     if (!$('.navbar-default').hasClass('active')) {
       $('.navbar-default').addClass('active home')
-    } else if ($('.navbar-default').hasClass('home') && scroll_pos < 440) {
+    } else if ($('.navbar-default').hasClass('home') && scroll_pos < 420) {
       $('.navbar-default').removeClass('active')
     }
   })
