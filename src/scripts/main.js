@@ -23,7 +23,6 @@ function navbarFixedTopAnimation () {
 
   $(document).scroll(function () {
     scroll_pos = $(this).scrollTop()
-    console.log(scroll_pos);
     if (scroll_pos > 50 && scroll_pos < 420 && !$('.navbar-default').hasClass('active') && window.innerWidth < 768) {
       $('.navbar-brand').html('CM');
     } else {
