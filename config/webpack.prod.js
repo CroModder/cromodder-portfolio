@@ -82,7 +82,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(eot?.+|svg?.+|ttf?.+|otf?.+|ico?.+|zip?.+|woff?.+|woff2?.+)$/,
+        test: /\.(pdf?.+|eot?.+|svg?.+|ttf?.+|otf?.+|ico?.+|zip?.+|woff?.+|woff2?.+)$/,
         use: 'file-loader?name=[path][name].[ext]'
       },
       {
