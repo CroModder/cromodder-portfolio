@@ -15,7 +15,7 @@ import {
 function importAll (r) {
   return r.keys().map(r)
 }
-importAll(require.context('./assets', true, /\.(png|jpe?g|svg|pdf)$/))
+importAll(require.context('./assets', true, /\.(png|jpe?g|svg)$/))
 
 // Declare which function are accessible to the browser
 Object.assign(window, {
