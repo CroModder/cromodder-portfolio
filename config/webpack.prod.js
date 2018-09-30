@@ -144,16 +144,11 @@ module.exports = {
         filename: '[name].[contenthash:8].css',
         allChunks: true
       }),
-      new CompressionPlugin({
-        asset: '[path].gz[query]',
-        algorithm: 'gzip',
-        test: /\.js$|\.css$|\.html$|\.eot?.+$|\.ttf?.+$|\.woff?.+$|\.svg?.+$/,
-        threshold: 10240 // Only assets bigger than this size are processed
-      }),
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
-        'window.jQuery': 'jquery'
+        'window.jQuery': 'jquery',
+        Popper: ['popper.js', 'default']
       }),
       new Dotenv({
         path: path.resolve(__dirname, '..', '.env'),
