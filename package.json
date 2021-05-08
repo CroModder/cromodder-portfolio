@@ -42,7 +42,7 @@
     "handlebars-loader": "^1.5.0",
     "html-webpack-plugin": "^2.29.0",
     "jquery": "^3.4.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.13.1",
     "popper.js": "^1.14.4",
     "postcss-loader": "^2.0.6",
     "preload-webpack-plugin": "^1.2.2",
