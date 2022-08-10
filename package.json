@@ -55,7 +55,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^4.6.2",
     "dotenv-webpack": "^1.8.0",
     "normalize.css": "^7.0.0",
     "scrollreveal": "^3.3.6"
